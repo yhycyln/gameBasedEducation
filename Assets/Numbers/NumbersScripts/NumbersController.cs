@@ -33,7 +33,7 @@ public class NumbersController : MonoBehaviour {
 
     void Awake()
     {
-        greaterOrLess = Random.Range(0, 2) == 0 ? false : true;
+
         gameSelection = 1;
         scoreText.text = "Score: 0";
         score = 0;
@@ -47,8 +47,11 @@ public class NumbersController : MonoBehaviour {
 
     void GenerateBoard()
     {
+        greaterOrLess = Random.Range(0, 2) == 0 ? false : true;
         int[] numbers = new int[10];
         if (gameSelection == 0) {
+            FindNumbersText.text = "Count to ";
+            FindNumbersText.text += (10 + level * 10).ToString();
             for (int i = 0; i < 10; i++)
                 numbers[i] = i + 1;
             int temp;
@@ -185,16 +188,21 @@ public class NumbersController : MonoBehaviour {
     {
         level++;
         balloonsPopped = 0;
-        for (int i = 0; i < 5; i++) {
+        if (gameSelection == 1)
+        {
+            for (int i = 0; i < 5; i++)
+            {
 
-            GameObject balloonToDestroy = balloons[0];
-            GameObject buttonToDestroy = buttons[0];
-            balloons.RemoveAt(0);
-            buttons.RemoveAt(0);
-            Destroy(balloonToDestroy);
-            Destroy(buttonToDestroy);
+                GameObject balloonToDestroy = balloons[0];
+                GameObject buttonToDestroy = buttons[0];
+                balloons.RemoveAt(0);
+                buttons.RemoveAt(0);
+                Destroy(balloonToDestroy);
+                Destroy(buttonToDestroy);
 
+            }
         }
+
         GenerateBoard();
     }
         
