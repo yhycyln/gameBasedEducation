@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ColliderScript : MonoBehaviour {
     public Vector3 CurrentDirection;
-    public float speedMultipilier;
+    public float speedMultiplier;
 
     NumbersController NumbersController;
     Collider2D Collider;
 
     void Awake()
     {
+        speedMultiplier = 5;
         NumbersController = GameObject.FindWithTag("NumbersController").GetComponent<NumbersController>();
         Collider = GetComponent<Collider2D>();
     }
@@ -66,8 +67,8 @@ public class ColliderScript : MonoBehaviour {
         CurrentDirection = newDirection;
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        transform.position = transform.position + CurrentDirection * speedMultipilier;
+        transform.position = transform.position + CurrentDirection * speedMultiplier;
     }
 }

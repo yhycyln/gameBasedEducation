@@ -6,17 +6,23 @@ using UnityEngine.UI;
 public class NumbersController : MonoBehaviour {
 
     public Text scoreText;
+    public Text FindNumbersText;
     int score;
-    
+    int randomNumber;
+    int gameSelection;  //0 numbers counting, 1 less or greater, 2 ...
     int nextNumber;
+    bool greaterOrLess;    //0 means greater, 1 means smaller
     public RectTransform BalloonLocationLayout;
     public GameObject Canvas;
     public Transform test;
     public GameObject BalloonPrefab;
     public GameObject BalloonClickablePrefab;
+    public List<GameObject> balloons;
+    public List<GameObject> buttons;
     public Vector3 InitialSpawnPosition;
     int level;
     List<Vector3> SpawnPositions;
+
 
     int balloonsPopped;
 
@@ -27,6 +33,8 @@ public class NumbersController : MonoBehaviour {
 
     void Awake()
     {
+        greaterOrLess = Random.Range(0, 2) == 0 ? false : true;
+        gameSelection = 1;
         scoreText.text = "Score: 0";
         score = 0;
         nextNumber = 1;
@@ -39,18 +47,47 @@ public class NumbersController : MonoBehaviour {
 
     void GenerateBoard()
     {
-
-        int[] randomNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int temp;
-        int random;
-        for (int i = 0; i < 10; i++)
-        {
-            temp = randomNumbers[i];
-            random = Random.Range(0, 10);
-            randomNumbers[i] = randomNumbers[random];
-            randomNumbers[random] = temp;
+        int[] numbers = new int[10];
+        if (gameSelection == 0) {
+            for (int i = 0; i < 10; i++)
+                numbers[i] = i + 1;
+            int temp;
+            int random;
+            for (int i = 0; i < 10; i++)
+            {
+                temp = numbers[i];
+                random = Random.Range(0, 10);
+                numbers[i] = numbers[random];
+                numbers[random] = temp;
+            }
         }
+        else if (gameSelection == 1) 
+        {
+            randomNumber = Random.Range(6, 96);
+           
+            FindNumbersText.text = "Find numbers ";
+            if (greaterOrLess)
+            {
+                FindNumbersText.text += "Smaller ";
+            }
+            else
+            {
+                FindNumbersText.text += "Greater ";
+            }
+            FindNumbersText.text += "than " + randomNumber + "!";
+            //Create Number:
+            for (int i = 0; i < 5; i++) 
+            {  //5 smaller
+                int randBalloonNumber = Random.Range(1, randomNumber);
+                numbers[i] = randBalloonNumber;
+            }
+            for (int i = 5; i < 10; i++)
+            {  //5 greater
+                int randBalloonNumber = Random.Range(randomNumber + 1, 100);
+                numbers[i] = randBalloonNumber;
+            }
 
+        }
         for (int i = 0; i < 10; i++)
         {
 
@@ -62,33 +99,85 @@ public class NumbersController : MonoBehaviour {
             newBalloon.GetComponent<ColliderScript>().CurrentDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
             newBalloon.GetComponent<Balloon>().ButtonConnection = newBalloonButton.GetComponent<BalloonConnection>();
             newBalloon.GetComponent<Balloon>().NumbersController = this;
-            newBalloonButton.GetComponent<BalloonConnection>().Number = randomNumbers[i] + 10*level;
-            newBalloonButton.transform.GetChild(0).GetComponent<Text>().text = (randomNumbers[i] + 10*level).ToString();
+            int additionToNumber = 0;
+            if(gameSelection == 0)
+                additionToNumber = 10*level;
+            newBalloonButton.GetComponent<BalloonConnection>().Number = numbers[i] + additionToNumber;
+            newBalloonButton.transform.GetChild(0).GetComponent<Text>().text = (numbers[i] + additionToNumber).ToString();
             newBalloonButton.GetComponent<BalloonConnection>().Balloon = newBalloon.GetComponent<Balloon>();
 
             newBalloon.GetComponent<Balloon>().Init();
+            balloons.Add(newBalloon);
+            buttons.Add(newBalloonButton);
         }
     }
 
     public void CheckValid(int number, GameObject balloon, GameObject button)
     {
-        if (number == nextNumber)
-        {
-            Destroy(button);
-            Destroy(balloon);
-            balloonsPopped++;
-            nextNumber++;
-            score += 10;
-            scoreText.text = "Score: " + score.ToString();
-            if (balloonsPopped == 10)
+        if (gameSelection == 0) {
+            if (number == nextNumber)
             {
-                LoadNextLevel();
+                balloons.Remove(balloon);
+                buttons.Remove(button);
+                Destroy(button);
+                Destroy(balloon);
+                
+                balloonsPopped++;
+                nextNumber++;
+                score += 10;
+                scoreText.text = "Score: " + score.ToString();
+                if (balloonsPopped == 10)
+                {
+                    LoadNextLevel();
+                }
+            }
+            else
+            {
+                score -= 5;
+                scoreText.text = "Score: " + score.ToString();
             }
         }
-        else
-        {
-            score -= 3;
-            scoreText.text = "Score: " + score.ToString();
+        else if(gameSelection == 1) {
+            if (greaterOrLess == false) {    //looking for greater
+                if (number > randomNumber) {    //destroy
+                    balloons.Remove(balloon);
+                    buttons.Remove(button);
+                    Destroy(button);
+                    Destroy(balloon);
+                    balloonsPopped++;
+                    score += 10;
+                    scoreText.text = "Score: " + score.ToString();
+                    if (balloonsPopped == 5) {
+
+                        LoadNextLevel();
+                    }
+                }
+                else
+                {
+                    score -= 5;
+                    scoreText.text = "Score: " + score.ToString();
+                }
+            }
+            else {      //looking for smaller
+                if (number < randomNumber) {    //destroy
+                    balloons.Remove(balloon);
+                    buttons.Remove(button);
+                    Destroy(button);
+                    Destroy(balloon);
+                    balloonsPopped++;
+                    score += 10;
+                    scoreText.text = "Score: " + score.ToString();
+                    if (balloonsPopped == 5) {
+
+                        LoadNextLevel();
+                    }
+                }
+                else
+                {
+                    score -= 5;
+                    scoreText.text = "Score: " + score.ToString();
+                }
+            }
         }
     }
 
@@ -96,6 +185,16 @@ public class NumbersController : MonoBehaviour {
     {
         level++;
         balloonsPopped = 0;
+        for (int i = 0; i < 5; i++) {
+
+            GameObject balloonToDestroy = balloons[0];
+            GameObject buttonToDestroy = buttons[0];
+            balloons.RemoveAt(0);
+            buttons.RemoveAt(0);
+            Destroy(balloonToDestroy);
+            Destroy(buttonToDestroy);
+
+        }
         GenerateBoard();
     }
         

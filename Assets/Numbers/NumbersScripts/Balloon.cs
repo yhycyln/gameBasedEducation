@@ -27,6 +27,8 @@ public class Balloon : MonoBehaviour {
         {
             return;
         }
-        ButtonConnection.transform.position = transform.position;
+        Vector3 emptyVector = Vector3.zero;
+        emptyVector.Set(transform.position.x, transform.position.y + 20, transform.position.z);
+        ButtonConnection.transform.position = emptyVector;
     }
 }

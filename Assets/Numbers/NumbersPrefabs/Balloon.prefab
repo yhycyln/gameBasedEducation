@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentDirection: {x: 0, y: 0, z: 0}
-  speedMultipilier: 10
+  speedMultiplier: 5
 --- !u!114 &114426157241585146
 MonoBehaviour:
   m_ObjectHideFlags: 1
