@@ -66,7 +66,7 @@ public class ColliderScript : MonoBehaviour {
         CurrentDirection = newDirection;
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
         transform.position = transform.position + CurrentDirection * speedMultipilier;
     }
