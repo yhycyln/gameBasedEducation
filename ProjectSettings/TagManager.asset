@@ -9,6 +9,9 @@ TagManager:
   - balloon
   - horizontalWall
   - verticalWall
+  - moneyText
+  - money
+  - MoneyController
   layers:
   - Default
   - TransparentFX
