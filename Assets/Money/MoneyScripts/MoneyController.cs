@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MoneyController : MonoBehaviour {
@@ -146,6 +147,13 @@ public class MoneyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+            // Insert Code Here (I.E. Load Scene, Etc)
+            // OR Application.Quit();
+
+            return;
+        }
+    }
 }

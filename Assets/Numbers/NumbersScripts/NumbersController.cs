@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NumbersController : MonoBehaviour {
 
@@ -31,6 +32,17 @@ public class NumbersController : MonoBehaviour {
     public List<Collider2D> Collisions;
     public List<Vector3> ColliderPositions;
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(1);
+            // Insert Code Here (I.E. Load Scene, Etc)
+            // OR Application.Quit();
+
+            return;
+        }
+    }
     void Awake()
     {
 
