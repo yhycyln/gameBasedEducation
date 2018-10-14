@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - NumbersController
   - border
   - balloon
@@ -13,6 +14,9 @@ TagManager:
   - money
   - MoneyController
   - group
+=======
+  - Shape
+>>>>>>> dev_singapur
   layers:
   - Default
   - TransparentFX
