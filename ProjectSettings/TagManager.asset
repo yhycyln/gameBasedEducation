@@ -12,6 +12,7 @@ TagManager:
   - moneyText
   - money
   - MoneyController
+  - group
   layers:
   - Default
   - TransparentFX

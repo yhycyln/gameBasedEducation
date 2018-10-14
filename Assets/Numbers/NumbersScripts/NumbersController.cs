@@ -34,7 +34,7 @@ public class NumbersController : MonoBehaviour {
     void Awake()
     {
 
-        gameSelection = 1;
+        gameSelection = 0;
         scoreText.text = "Score: 0";
         score = 0;
         nextNumber = 1;
@@ -51,7 +51,7 @@ public class NumbersController : MonoBehaviour {
         int[] numbers = new int[10];
         if (gameSelection == 0) {
             FindNumbersText.text = "Count to ";
-            FindNumbersText.text += (10 + level * 10).ToString();
+            FindNumbersText.text += (10 + level * 10).ToString() + "!";
             for (int i = 0; i < 10; i++)
                 numbers[i] = i + 1;
             int temp;
