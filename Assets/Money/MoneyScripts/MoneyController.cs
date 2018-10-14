@@ -40,7 +40,7 @@ public class MoneyController : MonoBehaviour {
         if (checkIfFinished())
         {
             canvas.transform.Find("CongText").GetComponent<Text>().enabled = true;
-            canvas.transform.Find("NewGamePanel").gameObject.SetActive(true);
+            canvas.transform.Find("NewGamePanel").gameObject.transform.hideFlags = HideFlags.None;
 
         }
         //cong. text;
@@ -74,7 +74,8 @@ public class MoneyController : MonoBehaviour {
         if (checkIfFinished())
         {
             canvas.transform.Find("CongText").GetComponent<Text>().enabled = true;
-            canvas.transform.Find("NewGamePanel").gameObject.SetActive(true);
+            canvas.transform.Find("NewGamePanel").gameObject.transform.hideFlags = HideFlags.None;
+            //canvas.transform.Find("NewGamePanel").gameObject.SetActive(true);
 
         }
             //cong. text;
@@ -86,15 +87,18 @@ public class MoneyController : MonoBehaviour {
     }
    // Use this for initialization
     void Start () {
-
+        Debug.Log("Start called");
         GenerateGame();
+
+
         //canvas.transform.Find("TargetText").GetComponent<Text>().text = "Target: 0 TL";
 
     }
     void GenerateGame() {
         canvas.transform.Find("CongText").GetComponent<Text>().enabled = false;
+        canvas.transform.Find("NewGamePanel").gameObject.hideFlags = HideFlags.HideInHierarchy;
         //canvas.transform.Find("NewGamePanel").GetComponentInChildren<Text>().enabled = false;
-        canvas.transform.Find("NewGamePanel").gameObject.SetActive(false);
+        //canvas.transform.Find("NewGamePanel").gameObject.SetActive(false);
         for (int i = 0; i < 4; i++)
             liraCount[i] = 0;
         for (int i = 0; i < 5; i++)

@@ -34,7 +34,7 @@ public class NumbersController : MonoBehaviour {
     void Awake()
     {
 
-        gameSelection = 0;
+        gameSelection = ApplicationModel.numbersSceneSelection;
         scoreText.text = "Score: 0";
         score = 0;
         nextNumber = 1;
