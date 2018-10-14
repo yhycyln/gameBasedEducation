@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitController : MonoBehaviour {
+public class ExitController1 : MonoBehaviour {
 
 	public void ExitGame(){
 	#if UNITY_EDITOR

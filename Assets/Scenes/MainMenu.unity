@@ -283,7 +283,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 181252952}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 181252954}
         m_MethodName: LoadByIndex
@@ -296,9 +295,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-=======
-      m_Calls: []
->>>>>>> dev_singapur
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &181252952
@@ -343,11 +339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 181252949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 6c9f278b2283a433da65c18f034c028e, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: e8df747b6b6a48d41a17d3b88e27138b, type: 3}
->>>>>>> dev_singapur
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &235423021
@@ -579,11 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 0.6691177, g: 0.6691177, b: 0.6691177, a: 0}
-=======
-  m_Color: {r: 0.6691177, g: 0.6691177, b: 0.6691177, a: 0.392}
->>>>>>> dev_singapur
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -702,9 +690,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 941456269}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
-      m_Calls: []
-=======
       m_Calls:
       - m_Target: {fileID: 181252954}
         m_MethodName: LoadByIndex
@@ -712,12 +697,11 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> dev_singapur
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &941456269
@@ -765,10 +749,7 @@ GameObject:
   - component: {fileID: 1036664947}
   - component: {fileID: 1036664946}
   - component: {fileID: 1036664945}
-<<<<<<< HEAD
   - component: {fileID: 1036664948}
-=======
->>>>>>> dev_singapur
   m_Layer: 5
   m_Name: MoneySceneButton
   m_TagString: Untagged
@@ -833,7 +814,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1036664946}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 1036664948}
         m_MethodName: LoadByIndex
@@ -846,9 +826,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-=======
-      m_Calls: []
->>>>>>> dev_singapur
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1036664946
@@ -885,7 +862,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036664943}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!114 &1036664948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,8 +873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9f278b2283a433da65c18f034c028e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> dev_singapur
 --- !u!1 &1078664389
 GameObject:
   m_ObjectHideFlags: 0

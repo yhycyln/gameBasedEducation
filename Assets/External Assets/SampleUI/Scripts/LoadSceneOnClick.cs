@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 
-public class LoadSceneOnClick:MonoBehaviour {
+public class LoadSceneOnClickNew:MonoBehaviour {
 
     public void LoadByIndex(int sceneIndex) {
     //Build Settings'e scene'i ekle

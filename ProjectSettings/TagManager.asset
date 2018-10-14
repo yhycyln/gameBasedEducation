@@ -3,20 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - NumbersController
-  - border
-  - balloon
-  - horizontalWall
-  - verticalWall
-  - moneyText
-  - money
-  - MoneyController
-  - group
-=======
-  - Shape
->>>>>>> dev_singapur
+  tags: []
   layers:
   - Default
   - TransparentFX

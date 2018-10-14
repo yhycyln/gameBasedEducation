@@ -9,7 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-<<<<<<< HEAD
     path: Assets/Scenes/NumbersMenu.unity
     guid: 9c0e781623e17462697d014fec17a481
   - enabled: 1
@@ -18,8 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Money.unity
     guid: 6dc313a79cb0fcc4b9fdd859ffc6df3f
-=======
+  - enabled: 1
     path: Assets/Scenes/2DShapes.unity
     guid: 9ac59131704935a40b3c0cdb25409a73
->>>>>>> dev_singapur
   m_configObjects: {}
