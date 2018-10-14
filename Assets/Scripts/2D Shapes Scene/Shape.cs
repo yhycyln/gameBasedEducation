@@ -17,7 +17,7 @@ public class Shape : MonoBehaviour {
 	void Update () {
 		this.GetComponent<Rigidbody2D>().velocity = Vector2.down * movementSpeed;
 
-		if(this.transform.position.y < -6f){
+		if(this.transform.position.y < -5.5f){
 			if( this.gameSceneController.GetComponent<GameSceneController>().targetShape.ToLower() + "(Clone)" == this.transform.name ){
 				//Game Over
 				Time.timeScale = 0;

@@ -11,6 +11,10 @@ public class Bullet : MonoBehaviour {
 
 	void Start(){
 		this.gameSceneController = GameObject.Find("GameSceneController");
+
+		if(transform.position.x > 3){
+			transform.Rotate(0, 0, 180);
+		}
 	}
 
 	void Update ()

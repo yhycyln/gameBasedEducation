@@ -53,10 +53,10 @@ public class GameSceneController : MonoBehaviour {
 
 		if(Time.timeScale == 0){
 			this.GameOver();
+		}
 
-			if( Input.GetKeyDown(KeyCode.R) ){
-				SceneManager.LoadScene( SceneManager.GetActiveScene().name );
-			}
+		if( Input.GetKeyDown(KeyCode.R) ){
+			this.Restart();
 		}
 	}
 
@@ -71,7 +71,7 @@ public class GameSceneController : MonoBehaviour {
 	private IEnumerator ShowMessage(){
 		this.targetShape = this.SelectRandomShape();
 		
-		OpeningMessageText.text = "Do not let " + this.targetShape + "s to reach the bottom of the page";
+		OpeningMessageText.text = "Do not let " + this.targetShape + "s to reach the bottom of the road";
 		
 		Dictionary<string, int> shapeSpriteDict = new Dictionary<string, int>();
 		shapeSpriteDict.Add("Circle", 0);
@@ -80,6 +80,9 @@ public class GameSceneController : MonoBehaviour {
 		shapeSpriteDict.Add("Triangle", 3);
 
 		TargetShapeImage.sprite = this.shapeSprites[ shapeSpriteDict[this.targetShape] ];
+		if(this.targetShape == "Rectangle"){
+			TargetShapeImage.rectTransform.sizeDelta = new Vector2(200, 100);
+		}
 
 		Time.timeScale = 0.01f;
 
@@ -92,8 +95,15 @@ public class GameSceneController : MonoBehaviour {
 	}
 
 	private void GameOver(){
+		#if UNITY_WSA
 		OpeningMessageText.text = "Game Over. Press R to Restart";
-
+		#else
+		OpeningMessageText.text = "Game Over. Press Button to Restart";
+		#endif
 		OpeningMessageText.enabled = true;
+	}
+
+	public void Restart(){
+		SceneManager.LoadScene( SceneManager.GetActiveScene().name );
 	}
 }
