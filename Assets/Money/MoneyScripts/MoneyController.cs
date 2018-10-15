@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class MoneyController : MonoBehaviour {
     public Canvas canvas;
     static int collected;
-    int gameSelection;
+    static int gameSelection;
     static int[] kurusValue = { 5, 10, 25, 50, 100 };
     static int[] liraValue = { 5, 10, 20, 50};
     static int[] liraCount = { 0, 0, 0, 0 };
@@ -19,11 +19,16 @@ public class MoneyController : MonoBehaviour {
     }
     public void addButtonClicked(Button button) {
         //Debug.Log("zaaa");
-
+        if (checkIfFinished())
+            return;
         if (gameSelection == 0)
         {
             int index = button.transform.parent.GetSiblingIndex();
+            Debug.Log(index);
             index -= 4;
+            Debug.Log(index);
+            //            Debug.Log(button);
+
             collected = collected + kurusValue[index];
             canvas.transform.Find("CollectedText").GetComponent<Text>().text = "Collected: " + collected + "krs";
             kurusCount[index] += 1;
@@ -32,6 +37,7 @@ public class MoneyController : MonoBehaviour {
         }
         else if(gameSelection == 1) {
             int index = button.transform.parent.GetSiblingIndex();
+            Debug.Log(index);
             collected = collected + liraValue[index];
             canvas.transform.Find("CollectedText").GetComponent<Text>().text = "Collected: " + collected + "TL";
             liraCount[index] += 1;
@@ -40,6 +46,7 @@ public class MoneyController : MonoBehaviour {
 
         if (checkIfFinished())
         {
+
             canvas.transform.Find("CongText").GetComponent<Text>().enabled = true;
             canvas.transform.Find("NewGamePanel").gameObject.transform.hideFlags = HideFlags.None;
 
@@ -49,14 +56,17 @@ public class MoneyController : MonoBehaviour {
     }
    
     public void subButtonClicked(Button button) {
+        if (checkIfFinished())
+            return;
         //Debug.Log("djkglsjg");
         int index = button.transform.parent.GetSiblingIndex();
-        Debug.Log("ksgjda");
+
         //if (kurusCount[index] == 0 && liraCount[index] == 0)
          //   return;
         if (gameSelection == 0)
         {
             index -= 4;
+            Debug.Log(index);
             collected = collected - kurusValue[index];
             canvas.transform.Find("CollectedText").GetComponent<Text>().text = "Collected: " + collected + "krs";
             kurusCount[index] -= 1;
@@ -82,13 +92,11 @@ public class MoneyController : MonoBehaviour {
             //cong. text;
     }
     public bool checkIfFinished() {
-        Debug.Log(target);
-        Debug.Log(collected);
         return collected == target;
     }
    // Use this for initialization
     void Start () {
-        Debug.Log("Start called");
+        Debug.Log("start called");
         GenerateGame();
 
 

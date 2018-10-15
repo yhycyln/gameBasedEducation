@@ -163,7 +163,7 @@ Prefab:
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 550.6
+      value: 567.3
       objectReference: {fileID: 0}
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
@@ -213,6 +213,11 @@ Prefab:
     - target: {fileID: 1041099923723070, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
       propertyPath: m_Name
       value: CountPanel (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443826900078720, guid: b059e30947a1b47908d45be6edbf04b5,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
@@ -272,7 +277,7 @@ Prefab:
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -613.1
+      value: -569.4
       objectReference: {fileID: 0}
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
@@ -328,6 +333,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1390977850}
+    - target: {fileID: 114557254806746902, guid: 06e7caa69c3c643ae98fe6736f4e361c,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7caa69c3c643ae98fe6736f4e361c, type: 2}
   m_IsPrefabAsset: 0
@@ -546,7 +556,7 @@ Prefab:
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -46.9
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
@@ -601,6 +611,11 @@ Prefab:
     - target: {fileID: 1049302970550526, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
       propertyPath: m_Name
       value: AddButton (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884862547537356, guid: 3bf293147bd414d17bf93a8830cbb175,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
@@ -697,7 +712,7 @@ Prefab:
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -536.4
+      value: -501.7
       objectReference: {fileID: 0}
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
@@ -752,6 +767,11 @@ Prefab:
     - target: {fileID: 1049302970550526, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
       propertyPath: m_Name
       value: AddButton (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884862547537356, guid: 3bf293147bd414d17bf93a8830cbb175,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
@@ -925,7 +945,7 @@ Prefab:
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 477.1
+      value: 494.9
       objectReference: {fileID: 0}
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
@@ -991,6 +1011,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: addButtonClicked
       objectReference: {fileID: 0}
+    - target: {fileID: 114884862547537356, guid: 3bf293147bd414d17bf93a8830cbb175,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
   m_IsPrefabAsset: 0
@@ -1049,7 +1074,7 @@ Prefab:
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -224.6
+      value: -188.9
       objectReference: {fileID: 0}
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
@@ -1099,6 +1124,11 @@ Prefab:
     - target: {fileID: 1041099923723070, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
       propertyPath: m_Name
       value: CountPanel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443826900078720, guid: b059e30947a1b47908d45be6edbf04b5,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
@@ -1596,7 +1626,7 @@ Prefab:
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 26.9
+      value: 57.8
       objectReference: {fileID: 0}
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
@@ -1647,6 +1677,11 @@ Prefab:
       propertyPath: m_Name
       value: CountPanel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114443826900078720, guid: b059e30947a1b47908d45be6edbf04b5,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
   m_IsPrefabAsset: 0
@@ -1687,7 +1722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 51.77}
+  m_AnchoredPosition: {x: 495.8, y: 51.77}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495121694
@@ -1808,7 +1843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &542867119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1977,7 +2012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.9, y: 51.77}
+  m_AnchoredPosition: {x: -254.8, y: 51.77}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622972834
@@ -2126,7 +2161,7 @@ Prefab:
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -371.3
+      value: -324.5
       objectReference: {fileID: 0}
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
@@ -2182,6 +2217,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1390977850}
+    - target: {fileID: 114557254806746902, guid: 06e7caa69c3c643ae98fe6736f4e361c,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7caa69c3c643ae98fe6736f4e361c, type: 2}
   m_IsPrefabAsset: 0
@@ -2327,7 +2367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -547.1, y: 51.77}
+  m_AnchoredPosition: {x: -500.3, y: 51.77}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788653071
@@ -2396,7 +2436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -52.7, y: 51.77}
+  m_AnchoredPosition: {x: -6.6, y: 51.77}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831368655
@@ -2465,7 +2505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.9, y: 51.77}
+  m_AnchoredPosition: {x: 229.7, y: 51.77}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900936413
@@ -2516,7 +2556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &955815470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2924,7 +2964,7 @@ Prefab:
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -480.5
+      value: -433.4
       objectReference: {fileID: 0}
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
@@ -2974,6 +3014,11 @@ Prefab:
     - target: {fileID: 1041099923723070, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
       propertyPath: m_Name
       value: CountPanel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443826900078720, guid: b059e30947a1b47908d45be6edbf04b5,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
@@ -3290,7 +3335,7 @@ Prefab:
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 136.7
+      value: 158
       objectReference: {fileID: 0}
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
@@ -3346,6 +3391,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1390977850}
+    - target: {fileID: 114557254806746902, guid: 06e7caa69c3c643ae98fe6736f4e361c,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7caa69c3c643ae98fe6736f4e361c, type: 2}
   m_IsPrefabAsset: 0
@@ -3579,7 +3629,7 @@ Prefab:
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 404.1
+      value: 419
       objectReference: {fileID: 0}
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
@@ -3635,6 +3685,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1390977850}
+    - target: {fileID: 114557254806746902, guid: 06e7caa69c3c643ae98fe6736f4e361c,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7caa69c3c643ae98fe6736f4e361c, type: 2}
   m_IsPrefabAsset: 0
@@ -3657,7 +3712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1497190597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3730,7 +3785,7 @@ Prefab:
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -121.2
+      value: -71.6
       objectReference: {fileID: 0}
     - target: {fileID: 224196131792108776, guid: 06e7caa69c3c643ae98fe6736f4e361c,
         type: 2}
@@ -3786,6 +3841,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1390977850}
+    - target: {fileID: 114557254806746902, guid: 06e7caa69c3c643ae98fe6736f4e361c,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7caa69c3c643ae98fe6736f4e361c, type: 2}
   m_IsPrefabAsset: 0
@@ -3844,7 +3904,7 @@ Prefab:
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 283.8
+      value: 309.2
       objectReference: {fileID: 0}
     - target: {fileID: 224161053763616478, guid: b059e30947a1b47908d45be6edbf04b5,
         type: 2}
@@ -3894,6 +3954,11 @@ Prefab:
     - target: {fileID: 1041099923723070, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
       propertyPath: m_Name
       value: CountPanel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443826900078720, guid: b059e30947a1b47908d45be6edbf04b5,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b059e30947a1b47908d45be6edbf04b5, type: 2}
@@ -4028,7 +4093,7 @@ Prefab:
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 210.9
+      value: 233.3
       objectReference: {fileID: 0}
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
@@ -4088,6 +4153,11 @@ Prefab:
         type: 2}
       propertyPath: m_Interactable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884862547537356, guid: 3bf293147bd414d17bf93a8830cbb175,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
@@ -4668,7 +4738,7 @@ Prefab:
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -298.6
+      value: -257.3
       objectReference: {fileID: 0}
     - target: {fileID: 224471076262561832, guid: 3bf293147bd414d17bf93a8830cbb175,
         type: 2}
@@ -4724,6 +4794,11 @@ Prefab:
       propertyPath: m_Name
       value: AddButton (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114884862547537356, guid: 3bf293147bd414d17bf93a8830cbb175,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bf293147bd414d17bf93a8830cbb175, type: 2}
   m_IsPrefabAsset: 0
@@ -4746,7 +4821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2038102387
 RectTransform:
   m_ObjectHideFlags: 0
