@@ -111,6 +111,7 @@ public class NumbersController : MonoBehaviour {
             GameObject newBalloonButton = Instantiate(BalloonClickablePrefab, Vector3.zero, Quaternion.identity);
             newBalloonButton.transform.SetParent(Canvas.transform);
 
+            newBalloon.GetComponent<Balloon>().CurrentDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
             newBalloon.GetComponent<ColliderScript>().CurrentDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
             newBalloon.GetComponent<Balloon>().ButtonConnection = newBalloonButton.GetComponent<BalloonConnection>();
             newBalloon.GetComponent<Balloon>().NumbersController = this;
