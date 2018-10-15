@@ -122,7 +122,6 @@ public class MoneyController : MonoBehaviour {
         }
         //decide kuruş or lira
         gameSelection = Random.Range(0, 2);   //0->kuruş, 1->lira
-        gameSelection = 1;
         target = Random.Range(1, 21) * 5;
         if (gameSelection == 0) {
             canvas.transform.Find("CollectedText").GetComponent<Text>().text = "Collected: 0 krs";
