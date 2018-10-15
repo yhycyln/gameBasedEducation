@@ -8,9 +8,11 @@ public class ColliderScript : MonoBehaviour {
 
     NumbersController NumbersController;
     Collider2D Collider;
+    Balloon Balloon;
 
     void Awake()
     {
+        Balloon = gameObject.GetComponent<Balloon>();
         speedMultiplier = 5;
         NumbersController = GameObject.FindWithTag("NumbersController").GetComponent<NumbersController>();
         Collider = GetComponent<Collider2D>();
@@ -38,6 +40,7 @@ public class ColliderScript : MonoBehaviour {
                 CurrentDirection = NumbersController.ColliderPositions[index];
                 NumbersController.ColliderPositions.RemoveAt(index);
             }
+            Balloon.CurrentDirection = CurrentDirection;
         }
     }
 
@@ -54,7 +57,7 @@ public class ColliderScript : MonoBehaviour {
             newDirection.Set(-1.0f * CurrentDirection.x, CurrentDirection.y, 0.0f);
         }
         CurrentDirection = newDirection;
-        
+        Balloon.CurrentDirection = CurrentDirection;
         
     }
     public void ChangeDirection()
@@ -67,8 +70,8 @@ public class ColliderScript : MonoBehaviour {
         CurrentDirection = newDirection;
     }
 
-    public void FixedUpdate()
-    {
-        transform.position = transform.position + CurrentDirection * speedMultiplier;
-    }
+    //public void FixedUpdate()
+    //{
+    //    transform.position = transform.position + CurrentDirection * speedMultiplier;
+    //}
 }
